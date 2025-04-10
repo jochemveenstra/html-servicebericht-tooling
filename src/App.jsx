@@ -1,4 +1,3 @@
-
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 
@@ -7,8 +6,8 @@ export default function HtmlServiceberichtGenerator() {
   const [output, setOutput] = useState("");
   const previewRef = useRef(null);
 
-  const htmlHeader = `<table bgcolor="#ebf7fe" border="0" cellpadding="0" cellspacing="0" width="100%">[...]<br><br>Beste %%FIRSTNAME%%,<br><br>`;
-  const htmlFooter = `<br><br>Met vriendelijke groet,<br>Klantenservice dé VakantieDiscounter<br>&nbsp;</p></td></tr></table>...</table>%%[ENDIF]%%%%[ENDIF]%%`;
+  const htmlHeader = `<table bgcolor="#ebf7fe" border="0" cellpadding="0" cellspacing="0" width="100%">...Belangrijke informatie over je vakantie</td></tr><tr><td align="left" class="content" ...> <p>Beste %%FIRSTNAME%%,<br><br>`;
+  const htmlFooter = `<br><br>Met vriendelijke groet,<br>Klantenservice dé VakantieDiscounter<br>&nbsp;</p></td></tr></table></td></tr></table>...</table>%%[ENDIF]%%%%[ENDIF]%%`;
 
   const generateHTML = () => {
     const paragraphs = input.trim().split(/\n{2,}/);
